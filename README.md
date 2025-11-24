@@ -41,6 +41,8 @@ LinearSVC with TF-IDF (1–3 n-gram) achieved ~97% validation accuracy and ~90% 
 
 Confusion Matrix.
 Most classes were predicted accurately, with the main confusion between Finance (1) and Technology (4)—a natural overlap due to similar terminology.
+
+
 <img src="Confusion Matrix.png" width="60%">
 0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 ### Code & Demo
