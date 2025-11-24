@@ -21,25 +21,25 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 - Short Description: We train our model to classify news articles from SogouNews dataset into multiple categories. The model uses [briefly describe your preprocessing, embeddings, or architecture]. We evaluate performance using standard metrics such as accuracy and F1-score.
 
 ### Results
--Article Lengths
+- Article Lengths
 Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
 
 <img src="text_length_statistics.png" width="60%">
 
--TF-IDF Feature Visualization
+- TF-IDF Feature Visualization
 Technology articles (label 4) cluster distinctly, while other categories partially overlap due to shared news vocabulary.
 
 <img src="dim_reduction.png" width="60%">
 
--Class Distribution
+- Class Distribution
 The dataset is fully balanced across the five categories, ensuring fair model training and evaluation.
 
 <img src="class_distribution.png" width="60%">
 
--Model Performance
+- Model Performance
 LinearSVC with TF-IDF (1–3 n-gram) achieved ~97% validation accuracy and ~90% macro-F1, outperforming KNN, Naive Bayes, CNN, and TextCNN baselines.
 
--Confusion Matrix
+- Confusion Matrix
 Most classes were predicted accurately, with the main confusion between Finance (1) and Technology (4)—a natural overlap due to similar terminology.
 
 
