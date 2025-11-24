@@ -23,6 +23,7 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 ### Results
 Article Lengths.
 Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
+
 <img src="text_length_statistics.png" width="60%">
 
 TF-IDF Feature Visualization.
