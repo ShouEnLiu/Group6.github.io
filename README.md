@@ -19,8 +19,8 @@
 
 ### Results
 <img src="class_distribution.png" width="60%">
-![Dim_reduction](dim_reduction.png)
-![Text_length_statistics](text_length_statistics.png)
+<img src="dim_reduction.png" width="60%">
+<img src="text_length_statistics.png" width="60%">
 
 ### Code & Demo
 - GitHub code: [GitHub Notebook]https://github.com/wellsonhuang/ECEN-758-Fall-2025-Project
