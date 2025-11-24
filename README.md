@@ -37,6 +37,8 @@ Analysis:
 Most classes were classified correctly with high precision and recall.
 The main confusion occurred between Entertainment and Finance, likely due to overlapping vocabulary in pinyin.
 Other categories, such as Sports and Technology, had very few cross-class errors.
+<img src="Confusion Matrix.png" width="60%">
+0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 <img src="class_distribution.png" width="60%">
 <img src="dim_reduction.png" width="60%">
 <img src="text_length_statistics.png" width="60%">
