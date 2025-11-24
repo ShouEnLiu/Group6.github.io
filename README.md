@@ -34,9 +34,9 @@ TextCNN: ~96% accuracy, ~89% macro-F1
 2. Confusion Matrix
 LinearSVC Confusion Matrix:
 Analysis:
-Most classes were classified correctly with high precision and recall.
-The main confusion occurred between Entertainment and Finance, likely due to overlapping vocabulary in pinyin.
-Other categories, such as Sports and Technology, had very few cross-class errors.
+Most classes were correctly classified with high precision, and misclassification rates were very low across all categories.
+The primary confusion occurred between Finance (1) and Technology (4), which is expected given the overlapping vocabulary in news involving tech companies’ financial performance.
+Other categories—Sports, Entertainment, and Automobile—showed minimal cross-class errors, indicating strong separability under the TF-IDF + LinearSVC model.
 <img src="Confusion Matrix.png" width="60%">
 0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 <img src="class_distribution.png" width="60%">
