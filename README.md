@@ -18,9 +18,9 @@
 - Short Description: We train our model to classify news articles from SogouNews dataset into multiple categories. The model uses [briefly describe your preprocessing, embeddings, or architecture]. We evaluate performance using standard metrics such as accuracy and F1-score.
 
 ### Results
-![Accuracy Curve](accuracy.png)
-![Confusion Matrix](confusion_matrix.png)
-![Sample News Visualization](sample_news.png)
+![Class_distribution](class_distribution.png)
+![Dim_reduction](dim_reduction.png)
+![Text_length_statistics](text_length_statistics.png)
 
 ### Code & Demo
 - GitHub code: [GitHub Notebook]https://github.com/wellsonhuang/ECEN-758-Fall-2025-Project
