@@ -18,7 +18,7 @@
 - Short Description: We train our model to classify news articles from SogouNews dataset into multiple categories. The model uses [briefly describe your preprocessing, embeddings, or architecture]. We evaluate performance using standard metrics such as accuracy and F1-score.
 
 ### Results
-![Class_distribution](class_distribution.png)
+<img src="class_distribution.png" width="60%">
 ![Dim_reduction](dim_reduction.png)
 ![Text_length_statistics](text_length_statistics.png)
 
