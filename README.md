@@ -21,6 +21,22 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 - Short Description: We train our model to classify news articles from SogouNews dataset into multiple categories. The model uses [briefly describe your preprocessing, embeddings, or architecture]. We evaluate performance using standard metrics such as accuracy and F1-score.
 
 ### Results
+1. Evaluation Metrics
+LinearSVC + TF-IDF (1-3 n-gram)
+Validation Accuracy: ~97%
+Test Macro-F1: ~90%
+Other Models:
+KNN: ~96% accuracy
+Naive Bayes: ~91% accuracy
+1D CNN: ~95% accuracy, ~88% macro-F1
+TextCNN: ~96% accuracy, ~89% macro-F1
+
+2. Confusion Matrix
+LinearSVC Confusion Matrix:
+Analysis:
+Most classes were classified correctly with high precision and recall.
+The main confusion occurred between Entertainment and Finance, likely due to overlapping vocabulary in pinyin.
+Other categories, such as Sports and Technology, had very few cross-class errors.
 <img src="class_distribution.png" width="60%">
 <img src="dim_reduction.png" width="60%">
 <img src="text_length_statistics.png" width="60%">
