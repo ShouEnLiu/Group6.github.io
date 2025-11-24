@@ -28,10 +28,12 @@ Most articles range from 300–800 characters, with many reaching the 3000-chara
 
 TF-IDF Feature Visualization.
 Technology articles (label 4) cluster distinctly, while other categories partially overlap due to shared news vocabulary.
+
 <img src="dim_reduction.png" width="60%">
 
 Class Distribution.
 The dataset is fully balanced across the five categories, ensuring fair model training and evaluation.
+
 <img src="class_distribution.png" width="60%">
 
 Model Performance.
