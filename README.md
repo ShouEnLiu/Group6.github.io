@@ -15,7 +15,7 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 
 ### Dataset
 - Name: SogouNews
-- Number of Classes: Multi-class (more than 5)
+- Number of Classes: Multi-class (5)
 - Brief Description: SogouNews is a Chinese news dataset containing articles categorized into multiple classes. Our task is to classify the news into their corresponding categories.
 
 ### Model
@@ -52,5 +52,7 @@ Most classes were predicted accurately, with the main confusion between Finance 
 ### Code & Demo
 - GitHub code: [GitHub Notebook](https://github.com/wellsonhuang/ECEN-758-Fall-2025-Project)
 
+### Dataset
+- Dataset : [Dataset](https://huggingface.co/datasets/community-datasets/sogou_news)
 ### Notes
 - This website summarizes the project completed for ECEN 758, focusing on multi-class class
