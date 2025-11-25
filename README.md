@@ -46,6 +46,7 @@ Most classes were predicted accurately, with the main confusion between Finance 
 
 
 <img src="Confusion Matrix.png" width="60%">
+
 0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 
 ### Code & Demo
