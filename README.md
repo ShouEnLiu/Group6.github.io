@@ -1,6 +1,6 @@
 # ECEN 758 Project - Data Mining and Analysis (Fall 2025)
 
-## Project Title - SogouNews Multi-Class News Classification Using Five Models: TF-IDF, SVM, KNN, Naive Bayes, and CNNs
+## Project Title - SogouNews Multi-Class News Classification Using four Models: SVM, KNN, Naive Bayes, and CNNs
 
 ## Team: Group 6
 
