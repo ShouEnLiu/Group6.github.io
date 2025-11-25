@@ -50,7 +50,7 @@ Most classes were predicted accurately, with the main confusion between Finance 
 0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 
 ### Code & Demo
-- GitHub code: [GitHub Notebook]https://github.com/wellsonhuang/ECEN-758-Fall-2025-Project
+- GitHub code: [GitHub Notebook](https://github.com/wellsonhuang/ECEN-758-Fall-2025-Project)
 
 ### Notes
 - This website summarizes the project completed for ECEN 758, focusing on multi-class class
