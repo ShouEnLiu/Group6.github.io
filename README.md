@@ -42,7 +42,7 @@ We implemented a weighting strategy where the title is emphasized. The text inpu
 * Duplicating the title doubles the Term Frequency (TF) of key title words.
 * Text was truncated to a maximum length of 3000 characters.
 
-## 3.Exploratory Data Analysis (EDA)
+#### 3.Exploratory Data Analysis (EDA)
 **Class Distribution:** The training set is perfectly balanced with 90,000 articles per class.
 **Length Distribution:** The mean article length is approximately 1,882 characters.
 
