@@ -44,11 +44,10 @@ We implemented a weighting strategy where the title is emphasized. The text inpu
 
 #### 3. Exploratory Data Analysis (EDA)
 **Class Distribution:** The training set is perfectly balanced with 90,000 articles per class.
-**Length Distribution:** The mean article length is approximately 1,882 characters.
 
 *<img src="class_distribution.png" width="60%">*
 
-**Text Length Distribution Among Articles:** Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
+**Text Length Distribution Among Articles:** Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length. The mean article length is approximately 1,882 characters.
 
 <img src="text_length_statistics.png" width="60%">
 
