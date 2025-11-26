@@ -55,13 +55,6 @@ To visualize the data, we used **Truncated SVD** to project high-dimensional TF-
 
 *<img src="dim_reduction.png" width="60%">*
 
-
----
-layout: default
-title: Results
-nav_order: 3
----
-
 # Experimental Results
 
 ## Model Performance Comparison
