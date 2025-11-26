@@ -19,8 +19,7 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 - Brief Description: SogouNews is a Chinese news dataset containing articles categorized into multiple classes. Our task is to classify the news into their corresponding categories.
 
 ### Model
-- Model type: Multinomial Naive Bayes (MNB)/k-Nearest Neighbors (KNN)/Linear Support Vector Classifier (LinearSVC)/1D CNN/TextCNN
-- Short Description: We train our model to classify news articles from SogouNews dataset into multiple categories. The model uses [briefly describe your preprocessing, embeddings, or architecture]. We evaluate performance using standard metrics such as accuracy and F1-score.
+- Model type: Multinomial Naive Bayes (MNB)/k-Nearest Neighbors (KNN)/Linear Support Vector Classifier (LinearSVC)/1D CNN/TextCNN.
 
 
 # Methodology
