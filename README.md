@@ -22,9 +22,9 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 - Model type: Multinomial Naive Bayes (MNB)/k-Nearest Neighbors (KNN)/Linear Support Vector Classifier (LinearSVC)/1D CNN/TextCNN.
 
 
-# Methodology
+### Methodology
 
-## 1. Data Preprocessing
+#### 1. Data Preprocessing
 The dataset used is the Sogou News dataset (in pinyin) containing 510,000 rows. We applied a custom normalization pipeline:
 **URL Removal:** Patterns matching `www`, `http`, and `https` were removed to prevent overfitting on hyperlinks.
 **Whitespace Collapsing:** Tabs, newlines, and varying spaces were collapsed into single spaces.
@@ -33,7 +33,7 @@ The dataset used is the Sogou News dataset (in pinyin) containing 510,000 rows. 
     * Validation: 45,000 samples
     * Test: 60,000 samples.
 
-## 2. Feature Engineering
+#### 2. Feature Engineering
 We implemented a weighting strategy where the title is emphasized. The text input was constructed as:
 `Text = Title + "[SEP]" + Title + Content`.
 * Duplicating the title doubles the Term Frequency (TF) of key title words.
@@ -49,7 +49,7 @@ We implemented a weighting strategy where the title is emphasized. The text inpu
 
 <img src="text_length_statistics.png" width="60%">
 
-## 4. Dimensionality Reduction
+#### 4. Dimensionality Reduction
 To visualize the data, we used **Truncated SVD** to project high-dimensional TF-IDF vectors into 2D space.
 **Observation:** Label 4 (Technology) formed a distinct, semi-isolated cluster, while other classes showed significant overlap.
 
@@ -57,7 +57,7 @@ To visualize the data, we used **Truncated SVD** to project high-dimensional TF-
 
 # Experimental Results
 
-## Model Performance Comparison
+### Model Performance Comparison
 We compared margin-based, probabilistic, and distance-based learning. LinearSVC achieved the strongest results across all metrics.
 
 | Model | Accuracy | Precision | Recall | F1-score |
@@ -67,17 +67,17 @@ We compared margin-based, probabilistic, and distance-based learning. LinearSVC 
 | **LinearSVC** | **0.97** | **0.97** | **0.97** | **0.97** |
 
 
-## Hyperparameter Tuning
+### Hyperparameter Tuning
 We found that **Word-level TF-IDF (97%)** significantly outperformed Character-level TF-IDF (90%).
 **N-gram settings:** The best performance was achieved with an n-gram range of **(1,3)**, likely because it captures short multi-word patterns common in pinyin.
   **Regularization:** Bayesian optimization found the best SVM C value at 8.365, though improvement over the default was minimal.
 
-## Neural Network Comparison
+### Neural Network Comparison
 We implemented a basic 1D CNN and an optimized TextCNN. 
 These models did not surpass the classical TF-IDF + LinearSVC baseline.
 The performance gap is likely due to training from scratch without pre-trained embeddings (like BERT or Word2Vec).
 
-## Confusion Matrix Analysis
+### Confusion Matrix Analysis
 The final evaluation on the test set showed 97% accuracy. 
 **Primary Error Source:** Confusion between **Finance (Label 1)** and **Technology (Label 4)**.
 This suggests semantic overlaps in business and industry reporting between these categories.
@@ -86,15 +86,15 @@ This suggests semantic overlaps in business and industry reporting between these
 
 0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 
-# Conclusion & Future Work
+### Conclusion & Future Work
 
-## Conclusion
+#### Conclusion
 Our work demonstrates that traditional machine learning models maintain persistent effectiveness in high-dimensional text classification.
 The **TF-IDF + LinearSVC** model was the most robust, achieving 97% accuracy.
 Margin-based classifiers are highly appropriate for sparse, high-dimensional feature spaces.
 Deep learning approaches (CNNs) are effective but require pre-trained embeddings to beat strong classical baselines in this specific pinyin context.
 
-## Future Work
+#### Future Work
 1.  **Advanced Preprocessing:** Use KeyBERT to extract representative keywords to better handle ambiguous classes.
 2.  **Transformer Models:** Leverage pre-trained embeddings (Word2Vec, GloVe) or Transformer models (BERT, RoBERTa) to capture richer semantic information.
 
