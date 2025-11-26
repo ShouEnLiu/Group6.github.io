@@ -44,7 +44,7 @@ We implemented a weighting strategy where the title is emphasized. The text inpu
 
 *<img src="class_distribution.png" width="60%">*
 
-**Text Length Distribution Amon Articles:** Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
+**Text Length Distribution Among Articles:** Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
 
 <img src="text_length_statistics.png" width="60%">
 
