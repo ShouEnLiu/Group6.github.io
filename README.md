@@ -22,7 +22,7 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 - Model type: Multinomial Naive Bayes (MNB)/k-Nearest Neighbors (KNN)/Linear Support Vector Classifier (LinearSVC)/1D CNN/TextCNN
 - Short Description: We train our model to classify news articles from SogouNews dataset into multiple categories. The model uses [briefly describe your preprocessing, embeddings, or architecture]. We evaluate performance using standard metrics such as accuracy and F1-score.
 
-### Results
+### EDA
 - Article Lengths:
 Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
 
@@ -38,12 +38,13 @@ The dataset is fully balanced across the five categories, ensuring fair model tr
 
 <img src="class_distribution.png" width="60%">
 
+## Results
 - Model Performance:
 LinearSVC with TF-IDF (1–3 n-gram) achieved ~97% validation accuracy and ~90% macro-F1, outperforming KNN, Naive Bayes, CNN, and TextCNN baselines.
 
+
 - Confusion Matrix:
 Most classes were predicted accurately, with the main confusion between Finance (1) and Technology (4)—a natural overlap due to similar terminology.
-
 
 <img src="Confusion Matrix.png" width="60%">
 
