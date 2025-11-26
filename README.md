@@ -27,9 +27,9 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 #### 1. Data Preprocessing
 The dataset used is the Sogou News dataset (in pinyin) containing 510,000 rows. We applied a custom normalization pipeline:
 
-**URL Removal:** Patterns matching `www`, `http`, and `https` were removed to prevent overfitting on hyperlinks.
+* **URL Removal:** Patterns matching `www`, `http`, and `https` were removed to prevent overfitting on hyperlinks.
 
-**Whitespace Collapsing:** Tabs, newlines, and varying spaces were collapsed into single spaces.
+* **Whitespace Collapsing:** Tabs, newlines, and varying spaces were collapsed into single spaces.
 
 * **Data Splitting:**
     * Training: 405,000 samples
