@@ -26,7 +26,7 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 
 ## 1. Data Preprocessing
 The dataset used is the Sogou News dataset (in pinyin) containing 510,000 rows. We applied a custom normalization pipeline:
-**URL Removal:** Patterns matching `www`, `http`, and `https` were removed to prevent overfitting on hyperlinks[cite: 252].
+**URL Removal:** Patterns matching `www`, `http`, and `https` were removed to prevent overfitting on hyperlinks.
 **Whitespace Collapsing:** Tabs, newlines, and varying spaces were collapsed into single spaces.
 * **Data Splitting:**
     * Training: 405,000 samples
@@ -68,7 +68,7 @@ We compared margin-based, probabilistic, and distance-based learning. LinearSVC 
 
 
 ## Hyperparameter Tuning
-We found that **Word-level TF-IDF (97%)** significantly outperformed Character-level TF-IDF (90%)[cite: 347].
+We found that **Word-level TF-IDF (97%)** significantly outperformed Character-level TF-IDF (90%).
 **N-gram settings:** The best performance was achieved with an n-gram range of **(1,3)**, likely because it captures short multi-word patterns common in pinyin.
   **Regularization:** Bayesian optimization found the best SVM C value at 8.365, though improvement over the default was minimal.
 
@@ -78,7 +78,7 @@ These models did not surpass the classical TF-IDF + LinearSVC baseline.
 The performance gap is likely due to training from scratch without pre-trained embeddings (like BERT or Word2Vec).
 
 ## Confusion Matrix Analysis
-The final evaluation on the test set showed 97% accuracy[cite: 400]. 
+The final evaluation on the test set showed 97% accuracy. 
 **Primary Error Source:** Confusion between **Finance (Label 1)** and **Technology (Label 4)**.
 This suggests semantic overlaps in business and industry reporting between these categories.
 
@@ -91,7 +91,7 @@ This suggests semantic overlaps in business and industry reporting between these
 ## Conclusion
 Our work demonstrates that traditional machine learning models maintain persistent effectiveness in high-dimensional text classification.
 The **TF-IDF + LinearSVC** model was the most robust, achieving 97% accuracy.
-Margin-based classifiers are highly appropriate for sparse, high-dimensional feature spaces[cite: 412].
+Margin-based classifiers are highly appropriate for sparse, high-dimensional feature spaces.
 Deep learning approaches (CNNs) are effective but require pre-trained embeddings to beat strong classical baselines in this specific pinyin context.
 
 ## Future Work
