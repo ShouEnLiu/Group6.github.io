@@ -42,7 +42,7 @@ We implemented a weighting strategy where the title is emphasized. The text inpu
 * Duplicating the title doubles the Term Frequency (TF) of key title words.
 * Text was truncated to a maximum length of 3000 characters.
 
-## Exploratory Data Analysis (EDA)
+## 3.Exploratory Data Analysis (EDA)
 **Class Distribution:** The training set is perfectly balanced with 90,000 articles per class.
 **Length Distribution:** The mean article length is approximately 1,882 characters.
 
@@ -52,7 +52,7 @@ We implemented a weighting strategy where the title is emphasized. The text inpu
 
 <img src="text_length_statistics.png" width="60%">
 
-#### 4. Dimensionality Reduction
+#### 4.Dimensionality Reduction
 To visualize the data, we used **Truncated SVD** to project high-dimensional TF-IDF vectors into 2D space.
 **Observation:** Label 4 (Technology) formed a distinct, semi-isolated cluster, while other classes showed significant overlap.
 
