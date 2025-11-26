@@ -54,5 +54,8 @@ Most classes were predicted accurately, with the main confusion between Finance 
 
 ### Dataset
 - Dataset : [Dataset](https://huggingface.co/datasets/community-datasets/sogou_news)
+
+### Download report
+- report: [Download PDF](ECEN_758_Group_Project_Report.pdf)
 ### Notes
 - This website summarizes the project completed for ECEN 758, focusing on multi-class class
