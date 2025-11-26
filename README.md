@@ -86,6 +86,18 @@ This suggests semantic overlaps in business and industry reporting between these
 
 0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 
+# Conclusion & Future Work
+
+## Conclusion
+Our work demonstrates that traditional machine learning models maintain persistent effectiveness in high-dimensional text classification.
+The **TF-IDF + LinearSVC** model was the most robust, achieving 97% accuracy.
+Margin-based classifiers are highly appropriate for sparse, high-dimensional feature spaces[cite: 412].
+Deep learning approaches (CNNs) are effective but require pre-trained embeddings to beat strong classical baselines in this specific pinyin context.
+
+## Future Work
+1.  **Advanced Preprocessing:** Use KeyBERT to extract representative keywords to better handle ambiguous classes.
+2.  **Transformer Models:** Leverage pre-trained embeddings (Word2Vec, GloVe) or Transformer models (BERT, RoBERTa) to capture richer semantic information.
+
 ### Code & Demo
 - GitHub code: [GitHub Notebook](https://github.com/wellsonhuang/ECEN-758-Fall-2025-Project)
 
