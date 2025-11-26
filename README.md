@@ -82,7 +82,7 @@ The performance gap is likely due to training from scratch without pre-trained e
 
 ### Confusion Matrix Analysis
 The final evaluation on the test set showed 97% accuracy. 
-**Primary Error Source:** Confusion between **Finance (Label 1)** and **Technology (Label 4)**.
+* **Primary Error Source:** Confusion between **Finance (Label 1)** and **Technology (Label 4)**.
 This suggests semantic overlaps in business and industry reporting between these categories.
 
 *<img src="Confusion Matrix.png" width="60%">*
