@@ -22,31 +22,74 @@ We further explored word-level TF-IDF with LinearSVC using randomized search, gr
 - Model type: Multinomial Naive Bayes (MNB)/k-Nearest Neighbors (KNN)/Linear Support Vector Classifier (LinearSVC)/1D CNN/TextCNN
 - Short Description: We train our model to classify news articles from SogouNews dataset into multiple categories. The model uses [briefly describe your preprocessing, embeddings, or architecture]. We evaluate performance using standard metrics such as accuracy and F1-score.
 
-### EDA
-- Article Lengths:
-Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
+
+# Methodology
+
+## 1. Data Preprocessing
+The dataset used is the Sogou News dataset (in pinyin) containing 510,000 rows. We applied a custom normalization pipeline:
+**URL Removal:** Patterns matching `www`, `http`, and `https` were removed to prevent overfitting on hyperlinks[cite: 252].
+**Whitespace Collapsing:** Tabs, newlines, and varying spaces were collapsed into single spaces.
+* **Data Splitting:** * Training: 405,000 samples
+    * Validation: 45,000 samples
+    * Test: 60,000 samples.
+
+## 2. Feature Engineering
+We implemented a weighting strategy where the title is emphasized. The text input was constructed as:
+`Text = Title + "[SEP]" + Title + Content`.
+* Duplicating the title doubles the Term Frequency (TF) of key title words.
+* Text was truncated to a maximum length of 3000 characters.
+
+## 3. Exploratory Data Analysis (EDA)
+**Class Distribution:** The training set is perfectly balanced with 90,000 articles per class.
+**Length Distribution:** The mean article length is approximately 1,882 characters.
+
+*<img src="class_distribution.png" width="60%">*
+
+** Text Length Distribution Amon Articles ** Most articles range from 300–800 characters, with many reaching the 3000-character limit, showing high variability in text length.
 
 <img src="text_length_statistics.png" width="60%">
 
-- TF-IDF Feature Visualization:
-Technology articles (label 4) cluster distinctly, while other categories partially overlap due to shared news vocabulary.
+## 4. Dimensionality Reduction
+To visualize the data, we used **Truncated SVD** to project high-dimensional TF-IDF vectors into 2D space.
+**Observation:** Label 4 (Technology) formed a distinct, semi-isolated cluster, while other classes showed significant overlap.
 
-<img src="dim_reduction.png" width="60%">
-
-- Class Distribution:
-The dataset is fully balanced across the five categories, ensuring fair model training and evaluation.
-
-<img src="class_distribution.png" width="60%">
-
-## Results
-- Model Performance:
-LinearSVC with TF-IDF (1–3 n-gram) achieved ~97% validation accuracy and ~90% macro-F1, outperforming KNN, Naive Bayes, CNN, and TextCNN baselines.
+*<img src="dim_reduction.png" width="60%">*
 
 
-- Confusion Matrix:
-Most classes were predicted accurately, with the main confusion between Finance (1) and Technology (4)—a natural overlap due to similar terminology.
+---
+layout: default
+title: Results
+nav_order: 3
+---
 
-<img src="Confusion Matrix.png" width="60%">
+# Experimental Results
+
+## Model Performance Comparison
+We compared margin-based, probabilistic, and distance-based learning. LinearSVC achieved the strongest results across all metrics.
+
+| Model | Accuracy | Precision | Recall | F1-score |
+|-------|----------|-----------|--------|----------|
+| Naive Bayes | 0.91 | 0.92 | 0.91 | 0.91 |
+| KNN | 0.96 | 0.96 | 0.96 | 0.96 |
+| **LinearSVC** | **0.97** | **0.97** | **0.97** | **0.97** |
+
+
+## Hyperparameter Tuning
+We found that **Word-level TF-IDF (97%)** significantly outperformed Character-level TF-IDF (90%)[cite: 347].
+**N-gram settings:** The best performance was achieved with an n-gram range of **(1,3)**, likely because it captures short multi-word patterns common in pinyin.
+  **Regularization:** Bayesian optimization found the best SVM C value at 8.365, though improvement over the default was minimal.
+
+## Neural Network Comparison
+We implemented a basic 1D CNN and an optimized TextCNN. 
+These models did not surpass the classical TF-IDF + LinearSVC baseline.
+The performance gap is likely due to training from scratch without pre-trained embeddings (like BERT or Word2Vec).
+
+## Confusion Matrix Analysis
+The final evaluation on the test set showed 97% accuracy[cite: 400]. 
+**Primary Error Source:** Confusion between **Finance (Label 1)** and **Technology (Label 4)**.
+This suggests semantic overlaps in business and industry reporting between these categories.
+
+*<img src="Confusion Matrix.png" width="60%">*
 
 0-sports, 1-finance, 2-entertainment, 3-automobile, 4-technology
 
